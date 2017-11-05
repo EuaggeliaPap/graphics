@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.appcook.user.graphics.MainActivity"
+    android:background="@color/whiteGray">
+
+    <TextView
+        android:id="@+id/TVfx"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Επιλέξτε τον τύπο της συνάρτησης F(x)= "
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/TVPie"
+        android:layout_width="270dp"
+        android:layout_height="62dp"
+        android:text="Τα ποσοστά των θετικών και των αρνητικών τιμών της συνάρτησης "
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="770dp"
+        android:padding="7dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_vertical_margin"
+        android:background="@color/white"
+        />
+    <Spinner
+        android:id="@+id/Sfx"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/whiteGray"
+        android:animateLayoutChanges="true"
+        />
+    <Button
+        android:id="@+id/show"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="100dp"
+        android:text="Show"
+        android:background="@drawable/pill_bg"
+         />
+    <Button
+        android:id="@+id/showPie"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="770dp"
+        android:layout_marginTop="100dp"
+        android:text="Pie_Chart"
+        android:background="@drawable/pill_bg" />
+
+    <com.androidplot.xy.XYPlot
+        style="@style/APDefacto.Light"
+        android:id="@+id/plot"
+        android:layout_width="700dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:title="Graph"
+        app:rangeTitle="range"
+        app:domainTitle="domain"
+        app:lineLabels="left|bottom"
+
+        />
+
+    <org.eazegraph.lib.charts.PieChart
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/piechart"
+        android:layout_width="420dp"
+        android:layout_height="420dp"
+        android:layout_marginLeft="750dp"
+        android:layout_marginTop="210dp"
+        android:padding="8dp"
+        app:egLegendTextSize="18sp"
+        app:egUseInnerValue="true"
+        app:egUseInnerPadding="true"
+        app:egInnerPaddingColor="@color/whiteGray"
+        app:egInnerValueColor="@color/ap_white"
+        />
+</RelativeLayout>
